@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const websites=[
+    { name: "CoolNameMaker Repo", url: "https://github.com/ychisbest/coolnamemaker", description: "Ai generate name tool repo" },
+    { name: "CoolNameMaker", url: "https://coolnamemaker.com", description: "https://coolnamemaker.com/tools/ship-name-generator" },
+    { name: "Time Dot", url: "https://timedot.net", description: "for adhd to address time blind" },
+    { name: "Hypackel", url: "https://hypackel.games", description: "games hub" },
+]
+---
+
+<Layout keywords={["home", "websites", "portfolio", "web developer", "projects", "games"]} title="My Personal Portfolio | Web Developer" description="Explore my collection of useful websites, projects and tools that I've developed and recommend.">
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent animate-pulse">Welcome to My Website</h1>
+            <div class="mt-4 relative">
+                <p class="text-xl text-gray-700 dark:text-gray-300">Curated collection of awesome projects and websites</p>
+                <svg class="w-24 h-24 absolute -top-12 -right-8 text-blue-100 opacity-50 transform rotate-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section class="mb-12 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-[1.01]">
+            <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-600 dark:text-blue-400 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+                Useful Websites
+            </h2>
+            <ul class="space-y-4">
+                {websites.map((website, index) => (
+                    <li class="transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md p-3 rounded-md border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay={index * 100}>
+                        <a href={website.url} target="_blank" rel="noopener noreferrer" class="text-lg font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+                            {website.name}
+                        </a>
+                        <p class="text-gray-600 dark:text-gray-400 mt-1">{website.description}</p>
+                    </li>
+                ))}
+            </ul>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-[1.01]">
+                <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-600 dark:text-blue-400 flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    About Me
+                </h2>
+                <p class="mb-3 text-gray-700 dark:text-gray-300">I'm a web developer with a passion for creating beautiful and functional websites.</p>
+                <p class="text-gray-700 dark:text-gray-300">
+                    Feel free to reach out to me on 
+                    <a href="http://github.com/timedotapp" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400">
+                        <span class="inline-flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </span>
+                    </a> or 
+                    <a href="http://twitter.com/timedotapp" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400">
+                        <span class="inline-flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.017 10.017 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                            Twitter
+                        </span>
+                    </a>.
+                </p>
+            </section>
+
+            <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-[1.01]">
+                <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-600 dark:text-blue-400 flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Contact
+                </h2>
+                <p class="text-gray-700 dark:text-gray-300">
+                    If you have any questions or comments, please feel free to 
+                    <a href="mailto:info@me.com" class="text-blue-600 hover:underline dark:text-blue-400 inline-flex items-center">
+                        <span class="border-b border-dotted border-blue-400">email me</span>
+                        <svg class="w-4 h-4 ml-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>.
+                </p>
+                <div class="mt-4 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+                    <form class="space-y-3">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                            <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Your name" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                            <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="you@example.com" />
+                        </div>
+                        <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                            Contact Me
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>© {new Date().getFullYear()} My Personal Website. All rights reserved.</p>
+            <p class="mt-1">Built with <span class="text-red-500">♥</span> using Astro and Tailwind CSS</p>
+        </footer>
+    </main>
+</Layout>
